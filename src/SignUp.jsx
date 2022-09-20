@@ -26,32 +26,61 @@ function SignUp() {
         </div>
         <div className="flex gap-1">
           <input
-            id="Number"
-            name="Number"
-            className="px-2 py-1 border-2 border-gray-300 focus:z-10 focus:border-2 focus:border-blue-600 focus:outline-none focus:ring-blue-600"
-            placeholder="Number"
-          />
-          <input
             id="Address"
             name="Address"
             className="px-2 py-1 border-2 border-gray-300 focus:z-10 focus:border-2 focus:border-blue-600 focus:outline-none focus:ring-blue-600"
             placeholder="Address"
           />
+          <input
+            id="Landmark"
+            name="Landmark"
+            className="px-2 py-1 border-2 border-gray-300 focus:z-10 focus:border-2 focus:border-blue-600 focus:outline-none focus:ring-blue-600"
+            placeholder="Landmark"
+          />
         </div>
         <div className="flex gap-1">
           <input
-            id="UserName"
-            name="UserName"
+            id="Mobile"
+            name="Mobile"
+            className="px-2 py-1 border-2 border-gray-300 focus:z-10 focus:border-2 focus:border-blue-600 focus:outline-none focus:ring-blue-600"
+            placeholder="Mobile number"
+          />
+          <input
+            id="Alternate"
+            name="Alternate"
+            className="px-2 py-1 border-2 border-gray-300 focus:z-10 focus:border-2 focus:border-blue-600 focus:outline-none focus:ring-blue-600"
+            placeholder="Alternate Number"
+          />
+        </div>
+        <div className="flex gap-1">
+          <input
+            id="Gmail"
+            name="Gmail"
+            className="px-2 py-1 border-2 border-gray-300 focus:z-10 focus:border-2 focus:border-blue-600 focus:outline-none focus:ring-blue-600"
+            placeholder="Gmail"
+          />
+          <input
+            id="Username"
+            name="Username"
             className="px-2 py-1 border-2 border-gray-300 focus:z-10 focus:border-2 focus:border-blue-600 focus:outline-none focus:ring-blue-600"
             placeholder="UserName"
           />
+        </div>
+        <div className="flex gap-1">
           <input
-            id="Password"
-            name="Password"
+            id="password"
+            name="password"
             className="px-2 py-1 border-2 border-gray-300 focus:z-10 focus:border-2 focus:border-blue-600 focus:outline-none focus:ring-blue-600"
             placeholder="Password"
           />
+          <input
+            id="confirm"
+            name="confirm"
+            className="px-2 py-1 border-2 border-gray-300 focus:z-10 focus:border-2 focus:border-blue-600 focus:outline-none focus:ring-blue-600"
+            placeholder="Confirm Password"
+          />
         </div>
+
         <div className="flex flex-col items-center justify-between gap-2">
           <button className="px-6 py-0 mx-auto bg-blue-700 rounded-md">
             SignUp

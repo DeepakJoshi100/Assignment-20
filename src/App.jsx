@@ -30,6 +30,16 @@ function App() {
       <div className="flex flex-col h-screen overflow-y-auto">
         <Navbar productCount={totalCount} />
 
+        <div className="flex justify-between max-w-4xl gap-4 font-black">
+          <div>
+            <Link to="/home">Home</Link>
+          </div>
+          <div className="flex gap-5">
+            <Link to="/LoginPage">Login</Link>
+            <Link to="/SignUp">Signup</Link>
+          </div>
+        </div>
+
         <div className="grow">
           <Routes>
             <Route index element={<MainProductList />}></Route>
@@ -38,6 +48,7 @@ function App() {
               element={<NewPageDetail onAddToCart={handleAddToCart} />}
             ></Route>
             <Route path="/products/main" element={<MainProductList />}></Route>
+            <Route path="/home" element={<MainProductList />}></Route>
             <Route path="/ContactUs" element={<Contact />}></Route>
             <Route path="/LoginPage" element={<Login />}></Route>
             <Route path="/SignUp" element={<SignUp />}></Route>
