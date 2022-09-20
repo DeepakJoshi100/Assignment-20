@@ -85,154 +85,174 @@ function SignUp() {
           SignUp
         </h1>
         <div className="flex gap-1">
-          <input
-            value={values.firstname}
-            onChange={handleChange}
-            onBlur={handleBlur}
-            id="firstname"
-            name="firstname"
-            className="px-2 py-1 border-2 border-gray-300 focus:z-10 focus:border-2 focus:border-blue-600 focus:outline-none focus:ring-blue-600"
-            placeholder="First-Name"
-          />
-          {touched.firstname && errors.firstname && (
-            <div className="text-xs font-black text-red-500">
-              {errors.firstname}
-            </div>
-          )}
-          <input
-            value={values.secondname}
-            onChange={handleChange}
-            onBlur={handleBlur}
-            id="secondname"
-            name="secondname"
-            className="px-2 py-1 border-2 border-gray-300 focus:z-10 focus:border-2 focus:border-blue-600 focus:outline-none focus:ring-blue-600"
-            placeholder="Second-Name"
-          />
-          {touched.secondname && errors.secondname && (
-            <div className="text-xs font-black text-red-500">
-              {errors.secondname}
-            </div>
-          )}
+          <div className="flex flex-col">
+            <input
+              value={values.firstname}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              id="firstname"
+              name="firstname"
+              className="px-2 py-1 border-2 border-gray-300 focus:z-10 focus:border-2 focus:border-blue-600 focus:outline-none focus:ring-blue-600"
+              placeholder="First-Name"
+            />
+            {touched.firstname && errors.firstname && (
+              <div className="text-xs font-black text-red-500">
+                {errors.firstname}
+              </div>
+            )}
+          </div>
+          <div className="flex flex-col">
+            <input
+              value={values.secondname}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              id="secondname"
+              name="secondname"
+              className="px-2 py-1 border-2 border-gray-300 focus:z-10 focus:border-2 focus:border-blue-600 focus:outline-none focus:ring-blue-600"
+              placeholder="Second-Name"
+            />
+            {touched.secondname && errors.secondname && (
+              <div className="text-xs font-black text-red-500">
+                {errors.secondname}
+              </div>
+            )}
+          </div>
         </div>
         <div className="flex gap-1">
-          <input
-            value={values.address}
-            onChange={handleChange}
-            onBlur={handleBlur}
-            id="address"
-            name="address"
-            className="px-2 py-1 border-2 border-gray-300 focus:z-10 focus:border-2 focus:border-blue-600 focus:outline-none focus:ring-blue-600"
-            placeholder="Address"
-          />
-          {touched.address && errors.address && (
-            <div className="text-xs font-black text-red-500">
-              {errors.address}
-            </div>
-          )}
-          <input
-            value={values.landmark}
-            onChange={handleChange}
-            onBlur={handleBlur}
-            id="landmark"
-            name="landmark"
-            className="px-2 py-1 border-2 border-gray-300 focus:z-10 focus:border-2 focus:border-blue-600 focus:outline-none focus:ring-blue-600"
-            placeholder="Landmark"
-          />
-          {touched.landmark && errors.landmark && (
-            <div className="text-xs font-black text-red-500">
-              {errors.landmark}
-            </div>
-          )}
+          <div className="flex flex-col">
+            <input
+              value={values.address}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              id="address"
+              name="address"
+              className="px-2 py-1 border-2 border-gray-300 focus:z-10 focus:border-2 focus:border-blue-600 focus:outline-none focus:ring-blue-600"
+              placeholder="Address"
+            />
+            {touched.address && errors.address && (
+              <div className="text-xs font-black text-red-500">
+                {errors.address}
+              </div>
+            )}
+          </div>
+          <div className="flex flex-col">
+            <input
+              value={values.landmark}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              id="landmark"
+              name="landmark"
+              className="px-2 py-1 border-2 border-gray-300 focus:z-10 focus:border-2 focus:border-blue-600 focus:outline-none focus:ring-blue-600"
+              placeholder="Landmark"
+            />
+            {touched.landmark && errors.landmark && (
+              <div className="text-xs font-black text-red-500">
+                {errors.landmark}
+              </div>
+            )}
+          </div>
         </div>
         <div className="flex gap-1">
-          <input
-            value={values.mobile}
-            onChange={handleChange}
-            onBlur={handleBlur}
-            id="mobile"
-            name="mobile"
-            className="px-2 py-1 border-2 border-gray-300 focus:z-10 focus:border-2 focus:border-blue-600 focus:outline-none focus:ring-blue-600"
-            placeholder="Mobile number"
-          />
-          {touched.mobile && errors.mobile && (
-            <div className="text-xs font-black text-red-500">
-              {errors.mobile}
-            </div>
-          )}
-          <input
-            value={values.alternate}
-            onChange={handleChange}
-            onBlur={handleBlur}
-            id="alternate"
-            name="alternate"
-            className="px-2 py-1 border-2 border-gray-300 focus:z-10 focus:border-2 focus:border-blue-600 focus:outline-none focus:ring-blue-600"
-            placeholder="Alternate Number"
-          />
-          {touched.alternate && errors.alternate && (
-            <div className="text-xs font-black text-red-500">
-              {errors.alternate}
-            </div>
-          )}
+          <div className="flex flex-col">
+            <input
+              value={values.mobile}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              id="mobile"
+              name="mobile"
+              className="px-2 py-1 border-2 border-gray-300 focus:z-10 focus:border-2 focus:border-blue-600 focus:outline-none focus:ring-blue-600"
+              placeholder="Mobile number"
+            />
+            {touched.mobile && errors.mobile && (
+              <div className="text-xs font-black text-red-500">
+                {errors.mobile}
+              </div>
+            )}
+          </div>
+          <div className="flex flex-col">
+            <input
+              value={values.alternate}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              id="alternate"
+              name="alternate"
+              className="px-2 py-1 border-2 border-gray-300 focus:z-10 focus:border-2 focus:border-blue-600 focus:outline-none focus:ring-blue-600"
+              placeholder="Alternate Number"
+            />
+            {touched.alternate && errors.alternate && (
+              <div className="text-xs font-black text-red-500">
+                {errors.alternate}
+              </div>
+            )}
+          </div>
         </div>
         <div className="flex gap-1">
-          <input
-            value={values.gmail}
-            onChange={handleChange}
-            onBlur={handleBlur}
-            id="gmail"
-            name="gmail"
-            className="px-2 py-1 border-2 border-gray-300 focus:z-10 focus:border-2 focus:border-blue-600 focus:outline-none focus:ring-blue-600"
-            placeholder="Gmail"
-          />
-          {touched.gmail && errors.gmail && (
-            <div className="text-xs font-black text-red-500">
-              {errors.gmail}
-            </div>
-          )}
-          <input
-            value={values.username}
-            onChange={handleChange}
-            onBlur={handleBlur}
-            id="username"
-            name="username"
-            className="px-2 py-1 border-2 border-gray-300 focus:z-10 focus:border-2 focus:border-blue-600 focus:outline-none focus:ring-blue-600"
-            placeholder="UserName"
-          />
-          {touched.username && errors.username && (
-            <div className="text-xs font-black text-red-500">
-              {errors.username}
-            </div>
-          )}
+          <div className="flex flex-col">
+            <input
+              value={values.gmail}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              id="gmail"
+              name="gmail"
+              className="px-2 py-1 border-2 border-gray-300 focus:z-10 focus:border-2 focus:border-blue-600 focus:outline-none focus:ring-blue-600"
+              placeholder="Gmail"
+            />
+            {touched.gmail && errors.gmail && (
+              <div className="text-xs font-black text-red-500">
+                {errors.gmail}
+              </div>
+            )}
+          </div>
+          <div className="flex flex-col">
+            <input
+              value={values.username}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              id="username"
+              name="username"
+              className="px-2 py-1 border-2 border-gray-300 focus:z-10 focus:border-2 focus:border-blue-600 focus:outline-none focus:ring-blue-600"
+              placeholder="UserName"
+            />
+            {touched.username && errors.username && (
+              <div className="text-xs font-black text-red-500">
+                {errors.username}
+              </div>
+            )}
+          </div>
         </div>
         <div className="flex gap-1">
-          <input
-            value={values.password}
-            onChange={handleChange}
-            onBlur={handleBlur}
-            id="password"
-            name="password"
-            className="px-2 py-1 border-2 border-gray-300 focus:z-10 focus:border-2 focus:border-blue-600 focus:outline-none focus:ring-blue-600"
-            placeholder="Password"
-          />
-          {touched.password && errors.password && (
-            <div className="text-xs font-black text-red-500">
-              {errors.password}
-            </div>
-          )}
-          <input
-            value={values.confirm}
-            onChange={handleChange}
-            onBlur={handleBlur}
-            id="confirm"
-            name="confirm"
-            className="px-2 py-1 border-2 border-gray-300 focus:z-10 focus:border-2 focus:border-blue-600 focus:outline-none focus:ring-blue-600"
-            placeholder="Confirm Password"
-          />
-          {touched.confirm && errors.confirm && (
-            <div className="text-xs font-black text-red-500">
-              {errors.confirm}
-            </div>
-          )}
+          <div className="flex flex-col">
+            <input
+              value={values.password}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              id="password"
+              name="password"
+              className="px-2 py-1 border-2 border-gray-300 focus:z-10 focus:border-2 focus:border-blue-600 focus:outline-none focus:ring-blue-600"
+              placeholder="Password"
+            />
+            {touched.password && errors.password && (
+              <div className="text-xs font-black text-red-500">
+                {errors.password}
+              </div>
+            )}
+          </div>
+          <div className="flex flex-col">
+            <input
+              value={values.confirm}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              id="confirm"
+              name="confirm"
+              className="px-2 py-1 border-2 border-gray-300 focus:z-10 focus:border-2 focus:border-blue-600 focus:outline-none focus:ring-blue-600"
+              placeholder="Confirm Password"
+            />
+            {touched.confirm && errors.confirm && (
+              <div className="text-xs font-black text-red-500">
+                {errors.confirm}
+              </div>
+            )}
+          </div>
         </div>
 
         <div className="flex flex-col items-center justify-between gap-2">
