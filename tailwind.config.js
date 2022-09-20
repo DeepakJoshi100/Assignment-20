@@ -1,36 +1,7 @@
 module.exports = {
-  content: ["src/**/*.jsx", "./index.html"],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {
-       rotate: {
-        '315': '315deg',
-      },
-      width: {
-        '13': '50px'
-      },
-     height: {
-        '13': '50px'
-      },
-    },
-
+    extend: {},
   },
-   
   plugins: [],
 };
-
-/*extend: {
-       rotate: {
-        '315': '315deg',
-         '314': '314deg'
-      },
-      width: {
-        '14': '50px'
-      },
-    },
-     height: {
-        '14': '50px'
-      },
-
-
-    
-  },*/
