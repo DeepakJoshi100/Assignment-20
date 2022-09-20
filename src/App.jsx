@@ -9,6 +9,8 @@ import { Routes, Route, Link } from "react-router-dom";
 import NoData from "./NoData";
 import Contact from "./Contact";
 import Login from "./Login";
+import SignUp from "./SignUp";
+import Forgot from "./Forgot";
 function App() {
   const saveDataString = localStorage.getItem("my-Cart") || "{}";
   const saveData = JSON.parse(saveDataString);
@@ -38,6 +40,8 @@ function App() {
             <Route path="/products/main" element={<MainProductList />}></Route>
             <Route path="/ContactUs" element={<Contact />}></Route>
             <Route path="/LoginPage" element={<Login />}></Route>
+            <Route path="/SignUp" element={<SignUp />}></Route>
+            <Route path="/Forgot" element={<Forgot />}></Route>
             <Route path="*" element={<NoData />}></Route>
           </Routes>
         </div>
