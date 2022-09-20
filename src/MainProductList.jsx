@@ -3,6 +3,7 @@ import ProductList from "./ProductList";
 import { getProductList } from "./api";
 import NoMatching from "./NoMatching";
 import Loading from "./Loading";
+import { Link } from "react-router-dom";
 
 function MainProductList() {
   const [productList, setProductList] = useState([]);
@@ -51,6 +52,8 @@ function MainProductList() {
 
   return (
     <>
+      {" "}
+      <Link to="/home"></Link>
       <div class="bg-white mt-8 mx-1 pt-8 mb-4 pb-4 mx-4 grow">
         <div class="sm:flex sm:justify-between max-w-4xl mx-auto mb-4 sm:mb-12">
           <div>

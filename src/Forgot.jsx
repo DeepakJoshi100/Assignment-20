@@ -1,12 +1,12 @@
 import React from "react";
-import { useFormik } from "formik";
-import { FiLogIn } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import { VscAccount } from "react-icons/vsc";
+import { useFormik } from "formik";
 import * as Yup from "yup";
 
-function Login() {
-  function callloginapi(values) {
-    console.log("sending data", values.email, values.password);
+function Forgot() {
+  function callloginapiforgot(values) {
+    console.log("sending data", "1", values.email, "2", values.password);
   }
 
   const schema = Yup.object().shape({
@@ -15,37 +15,35 @@ function Login() {
   });
 
   const {
-    handleSubmit,
     values,
     handleChange,
-    resetForm,
+    handleSubmit,
     errors,
-    handleBlur,
     touched,
-    isValid,
+    handleBlur,
     dirty,
+    isValid,
   } = useFormik({
     initialValues: {
       email: "",
       password: "",
     },
-    onSubmit: callloginapi,
+    onSubmit: callloginapiforgot,
     validationSchema: schema,
   });
 
   return (
     <>
-      {" "}
-      <Link to="/LoginPage"></Link>
+      <Link to="/Forgot"></Link>
       <div className="flex items-center justify-center h-screen bg-blue-100">
         <div className="flex items-center justify-center p-10 bg-blue-200 border-4 border-blue-300 rounded-md">
           <form
             onSubmit={handleSubmit}
-            className="flex flex-col items-center justify-center gap-5 p-5 bg-blue-300 border-4 border-blue-300 rounded-md"
+            className="flex flex-col items-center justify-center gap-5 p-10 bg-blue-300 border-4 border-blue-300 rounded-md"
           >
-            <FiLogIn className="text-6xl font-black text-black" />
+            <VscAccount className="text-6xl font-black text-black" />
             <h1 className="flex items-center justify-center text-4xl font-black text-blue-900">
-              Login
+              Forgot
             </h1>
             <div className="flex flex-col">
               <input
@@ -59,7 +57,7 @@ function Login() {
                 onBlur={handleBlur}
               />
               {touched.email && errors.email && (
-                <div className="text-red-500 text-xs font-black">
+                <div className="text-xs font-black text-red-500">
                   {errors.email}
                 </div>
               )}
@@ -74,7 +72,7 @@ function Login() {
                 onBlur={handleBlur}
               />
               {touched.password && errors.password && (
-                <div className="text-red-500 text-xs font-black">
+                <div className="text-xs font-black text-red-500">
                   {errors.password}
                 </div>
               )}
@@ -83,23 +81,10 @@ function Login() {
               <div className="flex items-center justify-between gap-2">
                 <button
                   type="submit"
-                  className="px-6 py-0 bg-blue-700 rounded-md disabled:bg-gray-200"
+                  className="px-6 py-0 mx-auto bg-blue-700 rounded-md disabled:bg-gray-200"
                   disabled={!dirty || !isValid}
                 >
-                  Login
-                </button>
-
-                <Link to="/Forgot" className="text-xs">
-                  Forgot Password
-                </Link>
-              </div>
-              <div className="flex justify-end items-end">
-                <button
-                  type="button"
-                  onClick={resetForm}
-                  className="px-6 py-0 bg-red-500 rounded-md  text-xs"
-                >
-                  Reset
+                  Get OTP
                 </button>
               </div>
               <button
@@ -114,6 +99,12 @@ function Login() {
                   SignUp
                 </Link>
               </button>
+              <Link
+                to="/LoginPage"
+                className="flex items-end justify-end text-xs font-bold text-gray-400"
+              >
+                Back To Login
+              </Link>
             </div>
           </form>
         </div>
@@ -121,4 +112,4 @@ function Login() {
     </>
   );
 }
-export default Login;
+export default Forgot;
