@@ -11,13 +11,13 @@ import Contact from "./Contact";
 import Login from "./Login";
 import SignUp from "./SignUp";
 import Forgot from "./Forgot";
-import Mobilemenu from "./mobilemenu";
 import { FaHamburger } from "react-icons/fa";
+import Mobilemenu from "./Mobilemenu";
 
 function App() {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
-  function handleOpenMenu() {
+  function handleMenuOpen() {
     setMenuOpen(!isMenuOpen);
   }
   const saveDataString = localStorage.getItem("my-Cart") || "{}";
@@ -37,14 +37,18 @@ function App() {
     <>
       <div className="flex flex-col h-screen overflow-y-auto">
         <Navbar productCount={totalCount} />
-
-        <div className="flex flex-col items-end justify-end fixed">
+        <div className="fixed flex flex-col items-start justify-start md:hidden">
           <FaHamburger
-            onClick={handleOpenMenu}
-            className="text-white text-4xl font-black "
+            onClick={handleMenuOpen}
+            className="text-4xl font-black text-white"
           />
-          {isMenuOpen && <Mobilemenu className="" />}
+          {isMenuOpen && (
+            <div>
+              <Mobilemenu />{" "}
+            </div>
+          )}
         </div>
+
         <div className="flex justify-between max-w-4xl gap-4 font-black">
           <div>
             <Link to="/home">Home</Link>
