@@ -7,7 +7,6 @@ function DummyMain({
   price,
   id,
   ProductTotalCount,
-  setCartProduct,
 }) {
   return (
     <>
