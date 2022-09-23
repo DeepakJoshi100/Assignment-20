@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { VscAccount } from "react-icons/vsc";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
 function Forgot() {
+  const [write, setWrite] = useState(false);
   function callloginapiforgot(values) {
     console.log("sending data", "1", values.email, "2", values.password);
   }
@@ -31,11 +32,14 @@ function Forgot() {
     onSubmit: callloginapiforgot,
     validationSchema: schema,
   });
+  function ChangeWrite() {
+    setWrite(!write);
+  }
 
   return (
     <>
       <Link to="/Forgot"></Link>
-      <div className="flex items-center justify-center h-screen bg-blue-100">
+      <div className="flex items-center justify-center h-full bg-blue-100">
         <div className="flex items-center justify-center p-10 bg-blue-200 border-4 border-blue-300 rounded-md">
           <form
             onSubmit={handleSubmit}
@@ -87,6 +91,21 @@ function Forgot() {
                   Get OTP
                 </button>
               </div>
+              {write && !errors.email && !errors.password && (
+                <div className="flex flex-col items-center justify-center text-xs font-bold text-green-800 rounded-md">
+                  OTP Sent Successfully
+                  <span className="flex items-center gap-2 text-xs font-normal text-black">
+                    Move to
+                    <Link
+                      to="/LoginPage"
+                      className="text-sm font-black text-red-400 underline"
+                    >
+                      Login
+                    </Link>
+                  </span>
+                </div>
+              )}
+
               <button
                 type="button"
                 className="flex items-end justify-end text-xs"
