@@ -10,12 +10,12 @@ function DummyMain({
 }) {
   return (
     <>
-      <div className="grid items-center justify-center max-w-4xl grid-cols-5 mx-auto my-2 space-y-5">
+      <div className="grid items-center justify-center max-w-4xl grid-cols-5 mx-auto my-2 space-y-5 bg-blue-200 border-2 border-blue-300 rounded-sm">
         <div className="w-20 aspect-square">
           <img src={thumbnail} className="object-cover w-full h-full" />
         </div>
         <div>
-          <div className="text-xs font-semibold">{title}</div>
+          <div className="text-xs font-black text-orange-400">{title}</div>
         </div>
 
         <div className="flex gap-1">
