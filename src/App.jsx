@@ -40,7 +40,7 @@ function App() {
 
   return (
     <>
-      <div className="flex flex-col h-screen overflow-y-auto">
+      <div className="flex flex-col h-screen overflow-y-auto ">
         <Navbar productCount={totalCount} />
         <div className="fixed flex flex-col items-start justify-start md:hidden">
           <FaHamburger

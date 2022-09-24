@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import DummyMain from "./DummyMain";
 import Loading from "./Loading";
 function DumyList({ setCartProduct, ProductTotalCount, cartProduct }) {
-  console.log(cartProduct.length);
   return (
     <>
       {cartProduct.length <= 0 ? (
@@ -13,16 +12,19 @@ function DumyList({ setCartProduct, ProductTotalCount, cartProduct }) {
         <div>
           {cartProduct.map(function (main) {
             return (
-              <DummyMain
-                ProductTotalCount={ProductTotalCount}
-                title={main.title}
-                category={main.category}
-                photo={main.thumbnail}
-                price={main.price}
-                rating={main.rating}
-                sale={main.sale}
-                {...main}
-              />
+              <>
+                <DummyMain
+                  ProductTotalCount={ProductTotalCount}
+                  setCartProduct={setCartProduct}
+                  title={main.title}
+                  category={main.category}
+                  photo={main.thumbnail}
+                  price={main.price}
+                  rating={main.rating}
+                  sale={main.sale}
+                  {...main}
+                />
+              </>
             );
           })}
         </div>
