@@ -4,7 +4,7 @@ import { VscAccount } from "react-icons/vsc";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { Formik, Form } from "formik";
-import Input from "./Input";
+import FormikInput from "./FormikInput";
 
 function Forgot() {
   const [write, setWrite] = useState(false);
@@ -42,7 +42,7 @@ function Forgot() {
                 Forgot
               </h1>
               <div className="flex flex-col">
-                <Input
+                <FormikInput
                   id="email"
                   type="email"
                   name="email"
@@ -50,7 +50,7 @@ function Forgot() {
                   placeholder="E-mail"
                 />
 
-                <Input
+                <FormikInput
                   id="password"
                   type="password"
                   name="password"

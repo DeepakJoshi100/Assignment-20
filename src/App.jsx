@@ -15,6 +15,7 @@ import { FaHamburger } from "react-icons/fa";
 import Mobilemenu from "./Mobilemenu";
 import { getProductData } from "./api";
 import Dumy from "./Dumy";
+import Input from "./Input";
 
 function App() {
   const [isMenuOpen, setMenuOpen] = useState(false);

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { SiGnuprivacyguard } from "react-icons/si";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
-import Input from "./Input";
+import FormikInput from "./FormikInput";
 
 function SignUp() {
   function callAPIforSignup(values) {
@@ -75,7 +75,7 @@ function SignUp() {
           </h1>
           <div className="flex gap-1">
             <div className="flex flex-col">
-              <Input
+              <FormikInput
                 id="firstname"
                 name="firstname"
                 className="px-2 py-1 border-2 border-gray-300 focus:z-10 focus:border-2 focus:border-blue-600 focus:outline-none focus:ring-blue-600"
@@ -83,7 +83,7 @@ function SignUp() {
               />
             </div>
             <div className="flex flex-col">
-              <Input
+              <FormikInput
                 id="secondname"
                 name="secondname"
                 className="px-2 py-1 border-2 border-gray-300 focus:z-10 focus:border-2 focus:border-blue-600 focus:outline-none focus:ring-blue-600"
@@ -93,7 +93,7 @@ function SignUp() {
           </div>
           <div className="flex gap-1">
             <div className="flex flex-col">
-              <Input
+              <FormikInput
                 id="address"
                 name="address"
                 className="px-2 py-1 border-2 border-gray-300 focus:z-10 focus:border-2 focus:border-blue-600 focus:outline-none focus:ring-blue-600"
@@ -101,7 +101,7 @@ function SignUp() {
               />
             </div>
             <div className="flex flex-col">
-              <Input
+              <FormikInput
                 id="landmark"
                 name="landmark"
                 className="px-2 py-1 border-2 border-gray-300 focus:z-10 focus:border-2 focus:border-blue-600 focus:outline-none focus:ring-blue-600"
@@ -111,7 +111,7 @@ function SignUp() {
           </div>
           <div className="flex gap-1">
             <div className="flex flex-col">
-              <Input
+              <FormikInput
                 id="mobile"
                 name="mobile"
                 className="px-2 py-1 border-2 border-gray-300 focus:z-10 focus:border-2 focus:border-blue-600 focus:outline-none focus:ring-blue-600"
@@ -119,7 +119,7 @@ function SignUp() {
               />
             </div>
             <div className="flex flex-col">
-              <Input
+              <FormikInput
                 id="alternate"
                 name="alternate"
                 className="px-2 py-1 border-2 border-gray-300 focus:z-10 focus:border-2 focus:border-blue-600 focus:outline-none focus:ring-blue-600"
@@ -129,7 +129,7 @@ function SignUp() {
           </div>
           <div className="flex gap-1">
             <div className="flex flex-col">
-              <Input
+              <FormikInput
                 id="gmail"
                 name="gmail"
                 className="px-2 py-1 border-2 border-gray-300 focus:z-10 focus:border-2 focus:border-blue-600 focus:outline-none focus:ring-blue-600"
@@ -137,7 +137,7 @@ function SignUp() {
               />
             </div>
             <div className="flex flex-col">
-              <Input
+              <FormikInput
                 id="username"
                 name="username"
                 className="px-2 py-1 border-2 border-gray-300 focus:z-10 focus:border-2 focus:border-blue-600 focus:outline-none focus:ring-blue-600"
@@ -147,7 +147,7 @@ function SignUp() {
           </div>
           <div className="flex gap-1">
             <div className="flex flex-col">
-              <Input
+              <FormikInput
                 id="password"
                 name="password"
                 className="px-2 py-1 border-2 border-gray-300 focus:z-10 focus:border-2 focus:border-blue-600 focus:outline-none focus:ring-blue-600"
@@ -155,7 +155,7 @@ function SignUp() {
               />
             </div>
             <div className="flex flex-col">
-              <Input
+              <FormikInput
                 id="confirm"
                 name="confirm"
                 className="px-2 py-1 border-2 border-gray-300 focus:z-10 focus:border-2 focus:border-blue-600 focus:outline-none focus:ring-blue-600"

@@ -3,7 +3,7 @@ import { Formik, Form } from "formik";
 import { FiLogIn } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import * as Yup from "yup";
-import Input from "./Input";
+import FormikInput from "./FormikInput";
 
 function Login() {
   function callloginapi(values) {
@@ -32,7 +32,7 @@ function Login() {
               <h1 className="flex items-center justify-center text-4xl font-black text-blue-900">
                 Login
               </h1>
-              <Input
+              <FormikInput
                 label="email"
                 id="email"
                 type="email"
@@ -40,7 +40,7 @@ function Login() {
                 placeholder="E-mail"
                 autoComplete="email"
               />
-              <Input
+              <FormikInput
                 label="password"
                 id="password"
                 type="password"
@@ -65,11 +65,11 @@ function Login() {
                 </div>
                 <Link to="/SignUp">SignUp</Link>
 
-                {/* <div className="flex justify-end items-end">
+                {/* <div className="flex items-end justify-end">
                   <button
                     type="button"
                     onClick={resetForm}
-                    className="px-6 py-0 bg-red-500 rounded-md  text-xs"
+                    className="px-6 py-0 text-xs bg-red-500 rounded-md"
                   >
                     Reset
                   </button>
