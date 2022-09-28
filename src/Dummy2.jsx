@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { AiOutlineDelete } from "react-icons/ai";
-import Loading from "./Loading";
 import Loading2 from "./Loading2";
 function Dummy2({
   thumbnail,

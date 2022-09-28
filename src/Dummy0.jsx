@@ -39,7 +39,7 @@ function Dummy0({ cart, setCart }) {
           <Loading />
         ) : (
           <>
-            <div className="h-full max-w-4xl p-2 mx-auto bg-gray-200">
+            <div className="h-full max-w-4xl p-2 mx-auto bg-gray-200 flex flex-col">
               <Dummytop />
               <div className="p-4 my-2 bg-white rounded-lg">
                 <Dummy1

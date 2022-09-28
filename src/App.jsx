@@ -27,11 +27,10 @@ function App() {
     const newCart = { ...cart, [productId]: oldCount + count };
     updateCart(newCart);
   }
-
   function updateCart(newCart) {
     setCart(newCart);
     const cartString = JSON.stringify(newCart);
-    localStorage.setItem("my-cart", cartString);
+    localStorage.setItem("my-Cart", cartString);
   }
 
   const totalCount = Object.keys(cart).reduce(function (previous, current) {
