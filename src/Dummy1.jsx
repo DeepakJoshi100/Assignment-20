@@ -1,6 +1,15 @@
 import Dummy2 from "./Dummy2";
 
-function Dummy1({ setCartProduct, ProductTotalCount, cartProduct }) {
+function Dummy1({
+  setCartProduct,
+  ProductTotalCount,
+  cartProduct,
+  setCart,
+  setLoading,
+  loading,
+  localCart,
+  setLocalCart,
+}) {
   return (
     <>
       {cartProduct.length <= 0 ? (
@@ -13,6 +22,11 @@ function Dummy1({ setCartProduct, ProductTotalCount, cartProduct }) {
             return (
               <>
                 <Dummy2
+                  localCart={localCart}
+                  setLocalCart={setLocalCart}
+                  loading={loading}
+                  setCart={setCart}
+                  setLoading={setLoading}
                   ProductTotalCount={ProductTotalCount}
                   setCartProduct={setCartProduct}
                   title={main.title}

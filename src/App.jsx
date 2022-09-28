@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
-import ProductList from "./ProductList";
 import Footer from "./Footer";
-import Newpage from "./Newpage";
 import MainProductList from "./MainProductList";
 import NewPageDetail from "./NewPageDetail";
 import { Routes, Route, Link } from "react-router-dom";
@@ -27,10 +25,15 @@ function App() {
   function handleAddToCart(productId, count) {
     const oldCount = cart[productId] || 0;
     const newCart = { ...cart, [productId]: oldCount + count };
+    updateCart(newCart);
+  }
+
+  function updateCart(newCart) {
     setCart(newCart);
     const cartString = JSON.stringify(newCart);
-    localStorage.setItem("my-Cart", cartString);
+    localStorage.setItem("my-cart", cartString);
   }
+
   const totalCount = Object.keys(cart).reduce(function (previous, current) {
     return previous + cart[current];
   }, 0);
@@ -46,12 +49,12 @@ function App() {
           />
           {isMenuOpen && (
             <div>
-              <Mobilemenu />{" "}
+              <Mobilemenu />
             </div>
           )}
         </div>
 
-        <div className="flex justify-between max-w-4xl gap-4 font-black">
+        <div className="flex max-w-4xl gap-4 mx-auto my-1 font-black hover:border-y-4 hover:border-gray-400 rounded-xl">
           <div className="flex gap-4">
             <Link to="/home">Home</Link>
             <Link to="/cart">Cart</Link>
@@ -72,7 +75,7 @@ function App() {
             <Route path="/home" element={<MainProductList />}></Route>
             <Route
               path="/cart"
-              element={<Dummy0 cart={cart} setCart={setCart} />}
+              element={<Dummy0 cart={cart} setCart={updateCart} />}
             ></Route>
             <Route path="/ContactUs" element={<Contact />}></Route>
             <Route path="/LoginPage" element={<Login />}></Route>
