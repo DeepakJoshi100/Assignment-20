@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
+import ProductList from "./ProductList";
 import Footer from "./Footer";
+import Newpage from "./Newpage";
 import MainProductList from "./MainProductList";
 import NewPageDetail from "./NewPageDetail";
 import { Routes, Route, Link } from "react-router-dom";
@@ -11,9 +13,6 @@ import SignUp from "./SignUp";
 import Forgot from "./Forgot";
 import { FaHamburger } from "react-icons/fa";
 import Mobilemenu from "./Mobilemenu";
-
-import Dummy0 from "./Dummy0";
-
 
 import { getProductData } from "./api"
 import Dumy from "./Dumy";
@@ -31,14 +30,10 @@ function App() {
   function handleAddToCart(productId, count) {
     const oldCount = cart[productId] || 0;
     const newCart = { ...cart, [productId]: oldCount + count };
-    updateCart(newCart);
-  }
-  function updateCart(newCart) {
     setCart(newCart);
     const cartString = JSON.stringify(newCart);
     localStorage.setItem("my-Cart", cartString);
   }
-
   const totalCount = Object.keys(cart).reduce(function (previous, current) {
     return previous + cart[current];
   }, 0);
@@ -54,12 +49,12 @@ function App() {
           />
           {isMenuOpen && (
             <div>
-              <Mobilemenu />
+              <Mobilemenu />{" "}
             </div>
           )}
         </div>
 
-        <div className="flex max-w-4xl gap-4 mx-auto my-1 font-black hover:border-y-4 hover:border-gray-400 rounded-xl">
+        <div className="flex justify-between max-w-4xl gap-4 font-black">
           <div className="flex gap-4">
             <Link to="/home">Home</Link>
             <Link to="/cart">Cart</Link>
@@ -78,10 +73,7 @@ function App() {
             ></Route>
             <Route path="/products/main" element={<MainProductList />}></Route>
             <Route path="/home" element={<MainProductList />}></Route>
-            <Route
-              path="/cart"
-              element={<Dummy0 cart={cart} setCart={updateCart} />}
-            ></Route>
+            <Route path="/cart" element={<Dumy cart={cart} />}></Route>
             <Route path="/ContactUs" element={<Contact />}></Route>
             <Route path="/LoginPage" element={<Login />}></Route>
             <Route path="/SignUp" element={<SignUp />}></Route>
