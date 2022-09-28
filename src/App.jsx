@@ -48,7 +48,7 @@ function App() {
           />
           {isMenuOpen && (
             <div>
-              <Mobilemenu />
+              <Mobilemenu className="" />
             </div>
           )}
         </div>
