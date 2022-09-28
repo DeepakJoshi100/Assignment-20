@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getProductData } from "./api";
 import Dummytop from "./Dummytop";
-import DumyList from "./DumyList";
+import Dummy1 from "./Dummy1";
 import Loading from "./Loading";
 
-function Dumy({ cart }) {
+function Dummy0({ cart }) {
   const [cartProduct, setCartProduct] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -27,10 +27,10 @@ function Dumy({ cart }) {
         {loading ? (
           <Loading />
         ) : (
-          <div className="bg-gray-200 h-full p-2 max-w-4xl mx-auto">
+          <div className="h-full max-w-4xl p-2 mx-auto bg-gray-200">
             <Dummytop />
-            <div className="bg-white p-4 my-2 rounded-lg">
-              <DumyList
+            <div className="p-4 my-2 bg-white rounded-lg">
+              <Dummy1
                 setCartProduct={setCartProduct}
                 ProductTotalCount={cart}
                 cartProduct={cartProduct}
@@ -42,4 +42,4 @@ function Dumy({ cart }) {
     </>
   );
 }
-export default Dumy;
+export default Dummy0;

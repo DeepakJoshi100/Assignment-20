@@ -13,9 +13,7 @@ import SignUp from "./SignUp";
 import Forgot from "./Forgot";
 import { FaHamburger } from "react-icons/fa";
 import Mobilemenu from "./Mobilemenu";
-import { getProductData } from "./api";
-import Dumy from "./Dumy";
-import Input from "./Input";
+import Dummy0 from "./Dummy0";
 
 function App() {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -72,7 +70,10 @@ function App() {
             ></Route>
             <Route path="/products/main" element={<MainProductList />}></Route>
             <Route path="/home" element={<MainProductList />}></Route>
-            <Route path="/cart" element={<Dumy cart={cart} />}></Route>
+            <Route
+              path="/cart"
+              element={<Dummy0 cart={cart} setCart={setCart} />}
+            ></Route>
             <Route path="/ContactUs" element={<Contact />}></Route>
             <Route path="/LoginPage" element={<Login />}></Route>
             <Route path="/SignUp" element={<SignUp />}></Route>

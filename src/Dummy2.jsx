@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-function DummyMain({
+function Dummy2({
   thumbnail,
 
   title,
@@ -33,4 +33,4 @@ function DummyMain({
     </>
   );
 }
-export default DummyMain;
+export default Dummy2;
