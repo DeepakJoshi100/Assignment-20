@@ -1,7 +1,15 @@
-import React, { useState } from "react";
-import DummyMain from "./DummyMain";
-import Loading from "./Loading";
-function DumyList({ setCartProduct, ProductTotalCount, cartProduct }) {
+import Dummy2 from "./Dummy2";
+
+function Dummy1({
+  setCartProduct,
+  ProductTotalCount,
+  cartProduct,
+  setCart,
+  setLoading,
+  loading,
+  localCart,
+  setLocalCart,
+}) {
   return (
     <>
       {cartProduct.length <= 0 ? (
@@ -13,7 +21,12 @@ function DumyList({ setCartProduct, ProductTotalCount, cartProduct }) {
           {cartProduct.map(function (main) {
             return (
               <>
-                <DummyMain
+                <Dummy2
+                  localCart={localCart}
+                  setLocalCart={setLocalCart}
+                  loading={loading}
+                  setCart={setCart}
+                  setLoading={setLoading}
                   ProductTotalCount={ProductTotalCount}
                   setCartProduct={setCartProduct}
                   title={main.title}
@@ -32,4 +45,4 @@ function DumyList({ setCartProduct, ProductTotalCount, cartProduct }) {
     </>
   );
 }
-export default DumyList;
+export default Dummy1;
